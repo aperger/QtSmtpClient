@@ -19,6 +19,7 @@
 #include "mimemessage.h"
 
 #include <QDateTime>
+#include <QUuid>
 #include "quotedprintable.h"
 #include <typeinfo>
 
@@ -250,7 +251,7 @@ QString MimeMessage::toString()
     mime += "\r\n";
     mime += "MIME-Version: 1.0\r\n";
     mime += QString("Date: %1\r\n").arg(QDateTime::currentDateTime().toString(Qt::RFC2822Date));
-
+    mime += QString("Message-ID: <%1@%2>\r\n").arg(QUuid::createUuid().toString(), sender->getAddress().mid(sender->getAddress().lastIndexOf('@') + 1));
     mime += content->toString();
     return mime;
 }
