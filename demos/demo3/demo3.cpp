@@ -34,6 +34,8 @@ int main(int argc, char *argv[])
 
     message.setSubject("SmtpClient for Qt - Demo");
 
+    message.setHeaderEncoding(MimePart::Encoding::QuotedPrintable);
+
     // Add some text
     MimeText text;
     text.setText("Hi!\n This is an email with some attachments.");

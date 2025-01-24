@@ -35,6 +35,8 @@ int main(int argc, char *argv[])
 
     message.setSubject("SmtpClient for Qt - Example 3 - Html email with images");
 
+    message.setHeaderEncoding(MimePart::Encoding::QuotedPrintable);
+
     // Now we need to create a MimeHtml object for HTML content
     MimeHtml html;
 

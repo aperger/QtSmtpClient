@@ -21,6 +21,8 @@ int main(int argc, char *argv[])
 
     message.setSubject("SmtpClient for Qt - Demo");
 
+    message.setHeaderEncoding(MimePart::Encoding::QuotedPrintable);
+
     // Now add some text to the email.
     // First we create a MimeText object.
 

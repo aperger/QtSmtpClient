@@ -98,6 +98,8 @@ void SendEmail::on_sendEmail_clicked()
     message.setSender(sender);
     message.setSubject(subject);
 
+    message.setHeaderEncoding(MimePart::Encoding::QuotedPrintable);
+
     for (int i = 0; i < rcptStringList.size(); ++i)
          message.addRecipient(stringToEmail(rcptStringList.at(i)));
 

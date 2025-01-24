@@ -191,7 +191,7 @@ QByteArray MimeMessage::format(const QString &text, MimePart::Encoding encoding)
             result.append(" =?utf-8?B?" + text.toUtf8().toBase64() + "?=");
             break;
         case MimePart::QuotedPrintable:
-            result.append(" =?utf-8?Q?" + QuotedPrintable::encode(text.toUtf8()).toLocal8Bit().replace(' ', "_").replace(':',"=3A") + "?=");
+            result.append(" =?utf-8?Q?" + QuotedPrintable::encode(text.toUtf8()).toLocal8Bit().replace(' ', "_").replace(':',"=3A").replace(",", "=2C") + "?=");
             break;
         default:
             result.append(" ").append(text.toLocal8Bit());
