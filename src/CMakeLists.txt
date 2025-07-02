@@ -88,7 +88,23 @@ set_target_properties(${LIBRARY_TARGET_NAME} PROPERTIES
 
 include(GNUInstallDirs)
 install(TARGETS ${LIBRARY_TARGET_NAME}
+	EXPORT SmtpMimeTargets
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}/smtpmime
 )
+	
+install(EXPORT SmtpMimeTargets
+	NAMESPACE SmtpMime::
+	DESTINATION lib/cmake/smtpmime 
+)
+
+include(CMakePackageConfigHelpers)
+write_basic_package_version_file(
+    "SmtpMimeConfigVersion.cmake"
+    VERSION ${SmtpMime_VERSION}
+    COMPATIBILITY AnyNewerVersion)
+	
+install(FILES "SmtpMimeConfig.cmake" "${CMAKE_CURRENT_BINARY_DIR}/SmtpMimeConfigVersion.cmake"
+    DESTINATION lib/cmake/smtpmime)	
+
 
