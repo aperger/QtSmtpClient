@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <Filter Include="Generated Files">
       <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
@@ -24,16 +24,6 @@
     <Filter Include="Source Files">
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
-    <Filter Include="Generated Files\Debug">
-      <UniqueIdentifier>{ce6df76d-6a4d-4043-92b2-7dedc7044286}</UniqueIdentifier>
-      <Extensions>cpp;moc</Extensions>
-      <SourceControlFiles>False</SourceControlFiles>
-    </Filter>
-    <Filter Include="Generated Files\Release">
-      <UniqueIdentifier>{5650dd33-1412-43b3-8897-ffa2464a52e1}</UniqueIdentifier>
-      <Extensions>cpp;moc</Extensions>
-      <SourceControlFiles>False</SourceControlFiles>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -73,106 +63,57 @@
     <ClCompile Include="src\smtpclient.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Debug\moc\moc_emailaddress.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="Release\moc\moc_emailaddress.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="Debug\moc\moc_mimeattachment.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="Release\moc\moc_mimeattachment.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="Debug\moc\moc_mimecontentformatter.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="Release\moc\moc_mimecontentformatter.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="Debug\moc\moc_mimefile.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="Release\moc\moc_mimefile.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="Debug\moc\moc_mimehtml.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="Release\moc\moc_mimehtml.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="Debug\moc\moc_mimemultipart.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="Release\moc\moc_mimemultipart.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="Debug\moc\moc_mimepart.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="Release\moc\moc_mimepart.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="Debug\moc\moc_quotedprintable.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="Release\moc\moc_quotedprintable.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
-    <ClCompile Include="Debug\moc\moc_smtpclient.cpp">
-      <Filter>Generated Files\Debug</Filter>
-    </ClCompile>
-    <ClCompile Include="Release\moc\moc_smtpclient.cpp">
-      <Filter>Generated Files\Release</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\SmtpMime">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <CustomBuild Include="src\emailaddress.h">
+    <QtMoc Include="src\emailaddress.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="src\mimeattachment.h">
+    </QtMoc>
+    <QtMoc Include="src\mimeattachment.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="src\mimecontentformatter.h">
+    </QtMoc>
+    <QtMoc Include="src\mimecontentformatter.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="src\mimefile.h">
+    </QtMoc>
+    <QtMoc Include="src\mimefile.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="src\mimehtml.h">
+    </QtMoc>
+    <QtMoc Include="src\mimehtml.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </QtMoc>
     <ClInclude Include="src\mimeinlinefile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\mimemessage.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <CustomBuild Include="src\mimemultipart.h">
+    <QtMoc Include="src\mimemultipart.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="src\mimepart.h">
+    </QtMoc>
+    <QtMoc Include="src\mimepart.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </QtMoc>
     <ClInclude Include="src\mimetext.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <CustomBuild Include="src\quotedprintable.h">
+    <QtMoc Include="src\quotedprintable.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
-    <CustomBuild Include="src\smtpclient.h">
+    </QtMoc>
+    <QtMoc Include="src\smtpclient.h">
       <Filter>Header Files</Filter>
-    </CustomBuild>
+    </QtMoc>
     <ClInclude Include="src\smtpexports.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="C:\Data\Projects\CPP\QtSmtpClient-1.1\QtSMTPClient_resource.rc" />
+    <CustomBuild Include="Debug\moc\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="Release\moc\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>
