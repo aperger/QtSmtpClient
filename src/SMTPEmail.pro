@@ -17,6 +17,7 @@ TARGET = SmtpMime
 TEMPLATE = lib
 
 DEFINES += SMTP_MIME_LIBRARY
+DEFINES += BUILD_SHARED_LIBS
 
 SOURCES += \
     emailaddress.cpp \
