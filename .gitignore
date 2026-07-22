@@ -6,3 +6,7 @@ moc_*.cpp
 *.pro.user*
 # CMake build directory
 build/
+.vs/
+Debug/
+Release/
+.qmake.stash
