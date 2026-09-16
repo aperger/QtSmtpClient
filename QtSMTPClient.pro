@@ -19,7 +19,9 @@ CONFIG(debug, debug|release) {
         DESTDIR = Release
 }
 OBJECTS_DIR = $$DESTDIR/obj
-MOC_DIR = $$DESTDIR/moc
+MOC_DIR     = $$DESTDIR/moc
+RCC_DIR     = $$DESTDIR/rcc
+UI_DIR      = $$DESTDIR/ui
 
 include(QtSMTPClient.pri)
 
